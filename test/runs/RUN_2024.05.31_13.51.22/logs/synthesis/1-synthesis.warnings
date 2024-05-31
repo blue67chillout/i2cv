@@ -1,0 +1,14 @@
+Warning: multiple conflicting drivers for test.\sda_out:
+Warning: multiple conflicting drivers for test.\sda_out:
+ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
+Warning: Wire test.\sda is used but has no driver.
+Warning: Wire test.\scl is used but has no driver.
+Warning: Wire test.\dout [7] is used but has no driver.
+Warning: Wire test.\dout [6] is used but has no driver.
+Warning: Wire test.\dout [5] is used but has no driver.
+Warning: Wire test.\dout [4] is used but has no driver.
+Warning: Wire test.\dout [3] is used but has no driver.
+Warning: Wire test.\dout [2] is used but has no driver.
+Warning: Wire test.\dout [1] is used but has no driver.
+Warning: Wire test.\dout [0] is used but has no driver.
+Warnings: 12 unique messages, 12 total

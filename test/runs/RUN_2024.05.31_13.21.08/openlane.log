@@ -1,0 +1,28 @@
+[INFO]: Run Directory: /openlane/designs/test/runs/RUN_2024.05.31_13.21.08
+[INFO]: Saving runtime environment...
+[INFO]: Preparing LEF files for the nom corner...
+[INFO]: Preparing LEF files for the min corner...
+[INFO]: Preparing LEF files for the max corner...
+[WARNING]: PNR_SDC_FILE is not set. It is recommended to write a custom SDC file for the design. Defaulting to BASE_SDC_FILE
+[WARNING]: SIGNOFF_SDC_FILE is not set. It is recommended to write a custom SDC file for the design. Defaulting to BASE_SDC_FILE
+[INFO]: Running linter (Verilator) (log: designs/test/runs/RUN_2024.05.31_13.21.08/logs/synthesis/linter.log)...
+[INFO]: 0 errors found by linter
+[WARNING]: 2 warnings found by linter
+[INFO]: Running Synthesis (log: designs/test/runs/RUN_2024.05.31_13.21.08/logs/synthesis/1-synthesis.log)...
+[ERROR]: during executing yosys script /openlane/scripts/yosys/synth.tcl
+[ERROR]: Log: designs/test/runs/RUN_2024.05.31_13.21.08/logs/synthesis/1-synthesis.log
+[ERROR]: Last 10 lines:
+
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `exec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+
+1. Executing Verilog-2005 frontend: /openlane/designs/test/src/test.v
+/openlane/designs/test/src/test.v:50: ERROR: Found non-synthesizable event list!
+child process exited abnormally
+
+[ERROR]: Creating issue reproducible...
+[INFO]: Saving runtime environment...
+[INFO]: Reproducible packaged at 'designs/test/runs/RUN_2024.05.31_13.21.08/issue_reproducible'.

@@ -1,0 +1,15 @@
+[ERROR]: during executing yosys script /openlane/scripts/yosys/synth.tcl
+[ERROR]: Log: designs/test/runs/RUN_2024.05.31_13.21.08/logs/synthesis/1-synthesis.log
+[ERROR]: Last 10 lines:
+
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `exec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+
+1. Executing Verilog-2005 frontend: /openlane/designs/test/src/test.v
+/openlane/designs/test/src/test.v:50: ERROR: Found non-synthesizable event list!
+child process exited abnormally
+
+[ERROR]: Creating issue reproducible...

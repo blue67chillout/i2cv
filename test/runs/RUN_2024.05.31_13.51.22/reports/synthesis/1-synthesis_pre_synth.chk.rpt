@@ -1,0 +1,7 @@
+
+17. Executing CHECK pass (checking for obvious problems).
+Checking module test...
+Warning: multiple conflicting drivers for test.\sda_out:
+    port Q[0] of cell $procdff$177 ($adff)
+    port Q[0] of cell $procdff$173 ($adff)
+Found and reported 1 problems.

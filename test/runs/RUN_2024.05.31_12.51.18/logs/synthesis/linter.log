@@ -1,0 +1,4 @@
+%Error: /openlane/designs/test/src/test.v:1:1: syntax error, unexpected IDENTIFIER
+    1 | mescale 1 ns / 1 ps
+      | ^~~~~~~
+%Error: Exiting due to 1 error(s)

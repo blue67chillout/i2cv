@@ -1,0 +1,7 @@
+%Error: /openlane/designs/test/src/test.v:4:4: Input/output/inout declaration not found for port: 'sca'
+    4 |    sca,scl,clk,rst,addr,rw,en,din,dout
+      |    ^~~
+%Error: /openlane/designs/test/src/test.v:6:11: Input/output/inout does not appear in port list: 'sda'
+    6 |     inout sda;  
+      |           ^~~
+%Error: Exiting due to 2 error(s)

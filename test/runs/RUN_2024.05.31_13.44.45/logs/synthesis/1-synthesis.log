@@ -1,0 +1,113 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.34 (git sha1 4a1b5599258, gcc 8.3.1 -fPIC -Os)
+
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `exec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+
+1. Executing Verilog-2005 frontend: /openlane/designs/test/src/test.v
+Parsing SystemVerilog input from `/openlane/designs/test/src/test.v' to AST representation.
+Generating RTLIL representation for module `\test'.
+Successfully finished Verilog frontend.
+
+2. Generating Graphviz representation of design.
+Writing dot description to `/openlane/designs/test/runs/RUN_2024.05.31_13.44.45/tmp/synthesis/hierarchy.dot'.
+Dumping module test to page 1.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1. Analyzing design hierarchy..
+Top module:  \test
+
+3.2. Analyzing design hierarchy..
+Top module:  \test
+Removed 0 unused modules.
+Renaming module test to test.
+
+4. Executing TRIBUF pass.
+
+5. Executing HIERARCHY pass (managing design hierarchy).
+
+5.1. Analyzing design hierarchy..
+Top module:  \test
+
+5.2. Analyzing design hierarchy..
+Top module:  \test
+Removed 0 unused modules.
+
+6. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+7. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/openlane/designs/test/src/test.v:140$59 in module test.
+Marked 2 switch rules as full_case in process $proc$/openlane/designs/test/src/test.v:124$32 in module test.
+Marked 9 switch rules as full_case in process $proc$/openlane/designs/test/src/test.v:50$12 in module test.
+Marked 1 switch rules as full_case in process $proc$/openlane/designs/test/src/test.v:42$8 in module test.
+Removed a total of 0 dead cases.
+
+8. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 1 redundant assignment.
+Promoted 7 assignments to connections.
+
+9. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\test.$proc$/openlane/designs/test/src/test.v:34$63'.
+  Set init value: \counter = 3'000
+Found init rule in `\test.$proc$/openlane/designs/test/src/test.v:32$62'.
+  Set init value: \clk_temp = 1'0
+
+10. Executing PROC_ARST pass (detect async resets in processes).
+
+11. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~14 debug messages>
+
+12. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\test.$proc$/openlane/designs/test/src/test.v:34$63'.
+Creating decoders for process `\test.$proc$/openlane/designs/test/src/test.v:32$62'.
+Creating decoders for process `\test.$proc$/openlane/designs/test/src/test.v:140$59'.
+     1/1: $1\sda_out[0:0]
+Creating decoders for process `\test.$proc$/openlane/designs/test/src/test.v:124$32'.
+     1/9: $2$lookahead\dout$31[7:0]$46
+     2/9: $2$bitselwrite$sel$/openlane/designs/test/src/test.v:133$3[2:0]$45
+     3/9: $2$bitselwrite$data$/openlane/designs/test/src/test.v:133$2[7:0]$44
+     4/9: $2$bitselwrite$mask$/openlane/designs/test/src/test.v:133$1[7:0]$43
+     5/9: $1$lookahead\dout$31[7:0]$42
+     6/9: $1$bitselwrite$sel$/openlane/designs/test/src/test.v:133$3[2:0]$41
+     7/9: $1$bitselwrite$data$/openlane/designs/test/src/test.v:133$2[7:0]$40
+     8/9: $1$bitselwrite$mask$/openlane/designs/test/src/test.v:133$1[7:0]$39
+     9/9: $0\sda_out[0:0]
+Creating decoders for process `\test.$proc$/openlane/designs/test/src/test.v:50$12'.
+     1/4: $0\count[2:0]
+     2/4: $0\saved_data[7:0]
+     3/4: $0\addrw[7:0]
+     4/4: $0\state[3:0]
+Creating decoders for process `\test.$proc$/openlane/designs/test/src/test.v:42$8'.
+     1/2: $0\counter[2:0]
+     2/2: $0\clk_temp[0:0]
+
+13. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+14. Executing PROC_DFF pass (convert process syncs to FFs).
+ERROR: Multiple edge sensitive events found for this signal!

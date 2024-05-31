@@ -1,0 +1,128 @@
+%Warning-CASEINCOMPLETE: /openlane/designs/test/src/test.v:145:9: Case values incompletely covered (example pattern 0x0)
+  145 |         case (state)
+      |         ^~~~
+                         ... For warning description see https://verilator.org/warn/CASEINCOMPLETE?v=5.018
+                         ... Use "/* verilator lint_off CASEINCOMPLETE */" and lint_on around source to disable this message.
+%Warning-BLKSEQ: /openlane/designs/test/src/test.v:109:27: Blocking assignment '=' in sequential logic process
+                                                         : ... Suggest using delayed assignment '<='
+  109 |                     count = 3'd7;
+      |                           ^
+%Warning-BLKSEQ: /openlane/designs/test/src/test.v:101:27: Blocking assignment '=' in sequential logic process
+                                                         : ... Suggest using delayed assignment '<='
+  101 |                     count = 3'd7;
+      |                           ^
+%Warning-BLKSEQ: /openlane/designs/test/src/test.v:126:17: Blocking assignment '=' in sequential logic process
+                                                         : ... Suggest using delayed assignment '<='
+  126 |         sda_out = 1'b1;
+      |                 ^
+%Warning-BLKSEQ: /openlane/designs/test/src/test.v:142:17: Blocking assignment '=' in sequential logic process
+                                                         : ... Suggest using delayed assignment '<='
+  142 |         sda_out = 1'b1;
+      |                 ^
+%Error-BLKANDNBLK: /openlane/designs/test/src/test.v:33:10: Unsupported: Blocked and non-blocking assignments to same variable: 'test.count'
+   33 | reg [2:0]count;
+      |          ^~~~~
+                   /openlane/designs/test/src/test.v:109:27: ... Location of blocking assignment
+  109 |                     count = 3'd7;
+      |                           ^
+                   /openlane/designs/test/src/test.v:95:28: ... Location of nonblocking assignment
+   95 |                 else count <= count - 1;
+      |                            ^~
+%Error-BLKANDNBLK: /openlane/designs/test/src/test.v:33:10: Unsupported: Blocked and non-blocking assignments to same variable: 'test.count'
+   33 | reg [2:0]count;
+      |          ^~~~~
+                   /openlane/designs/test/src/test.v:109:27: ... Location of blocking assignment
+  109 |                     count = 3'd7;
+      |                           ^
+                   /openlane/designs/test/src/test.v:88:28: ... Location of nonblocking assignment
+   88 |                 else count <= count - 1;
+      |                            ^~
+%Error-BLKANDNBLK: /openlane/designs/test/src/test.v:33:10: Unsupported: Blocked and non-blocking assignments to same variable: 'test.count'
+   33 | reg [2:0]count;
+      |          ^~~~~
+                   /openlane/designs/test/src/test.v:109:27: ... Location of blocking assignment
+  109 |                     count = 3'd7;
+      |                           ^
+                   /openlane/designs/test/src/test.v:75:27: ... Location of nonblocking assignment
+   75 |                     count <= 3'd7;
+      |                           ^~
+%Error-BLKANDNBLK: /openlane/designs/test/src/test.v:33:10: Unsupported: Blocked and non-blocking assignments to same variable: 'test.count'
+   33 | reg [2:0]count;
+      |          ^~~~~
+                   /openlane/designs/test/src/test.v:109:27: ... Location of blocking assignment
+  109 |                     count = 3'd7;
+      |                           ^
+                   /openlane/designs/test/src/test.v:79:27: ... Location of nonblocking assignment
+   79 |                     count <= 3'd7;
+      |                           ^~
+%Error-BLKANDNBLK: /openlane/designs/test/src/test.v:33:10: Unsupported: Blocked and non-blocking assignments to same variable: 'test.count'
+   33 | reg [2:0]count;
+      |          ^~~~~
+                   /openlane/designs/test/src/test.v:109:27: ... Location of blocking assignment
+  109 |                     count = 3'd7;
+      |                           ^
+                   /openlane/designs/test/src/test.v:69:27: ... Location of nonblocking assignment
+   69 |                 else count<= count - 1; 
+      |                           ^~
+%Error-BLKANDNBLK: /openlane/designs/test/src/test.v:33:10: Unsupported: Blocked and non-blocking assignments to same variable: 'test.count'
+   33 | reg [2:0]count;
+      |          ^~~~~
+                   /openlane/designs/test/src/test.v:109:27: ... Location of blocking assignment
+  109 |                     count = 3'd7;
+      |                           ^
+                   /openlane/designs/test/src/test.v:63:23: ... Location of nonblocking assignment
+   63 |                 count <=3'd7;
+      |                       ^~
+%Error-BLKANDNBLK: /openlane/designs/test/src/test.v:31:5: Unsupported: Blocked and non-blocking assignments to same variable: 'test.sda_out'
+   31 | reg sda_out;   
+      |     ^~~~~~~
+                   /openlane/designs/test/src/test.v:142:17: ... Location of blocking assignment
+  142 |         sda_out = 1'b1;
+      |                 ^
+                   /openlane/designs/test/src/test.v:146:28: ... Location of nonblocking assignment
+  146 |             START: sda_out <=0;    
+      |                            ^~
+%Error-BLKANDNBLK: /openlane/designs/test/src/test.v:31:5: Unsupported: Blocked and non-blocking assignments to same variable: 'test.sda_out'
+   31 | reg sda_out;   
+      |     ^~~~~~~
+                   /openlane/designs/test/src/test.v:142:17: ... Location of blocking assignment
+  142 |         sda_out = 1'b1;
+      |                 ^
+                   /openlane/designs/test/src/test.v:147:28: ... Location of nonblocking assignment
+  147 |             STOP : sda_out <=1;
+      |                            ^~
+%Error-BLKANDNBLK: /openlane/designs/test/src/test.v:31:5: Unsupported: Blocked and non-blocking assignments to same variable: 'test.sda_out'
+   31 | reg sda_out;   
+      |     ^~~~~~~
+                   /openlane/designs/test/src/test.v:142:17: ... Location of blocking assignment
+  142 |         sda_out = 1'b1;
+      |                 ^
+                   /openlane/designs/test/src/test.v:135:29: ... Location of nonblocking assignment
+  135 |             default:sda_out <= 1; 
+      |                             ^~
+%Warning-MULTIDRIVEN: /openlane/designs/test/src/test.v:31:5: Signal has multiple driving blocks with different clocking: 'test.sda_out'
+                      /openlane/designs/test/src/test.v:135:21: ... Location of first driving block
+  135 |             default:sda_out <= 1; 
+      |                     ^~~~~~~
+                      /openlane/designs/test/src/test.v:146:20: ... Location of other driving block
+  146 |             START: sda_out <=0;    
+      |                    ^~~~~~~
+%Error-BLKANDNBLK: /openlane/designs/test/src/test.v:31:5: Unsupported: Blocked and non-blocking assignments to same variable: 'test.sda_out'
+   31 | reg sda_out;   
+      |     ^~~~~~~
+                   /openlane/designs/test/src/test.v:142:17: ... Location of blocking assignment
+  142 |         sda_out = 1'b1;
+      |                 ^
+                   /openlane/designs/test/src/test.v:132:29: ... Location of nonblocking assignment
+  132 |             W_DATA: sda_out <= saved_data[count];
+      |                             ^~
+%Error-BLKANDNBLK: /openlane/designs/test/src/test.v:31:5: Unsupported: Blocked and non-blocking assignments to same variable: 'test.sda_out'
+   31 | reg sda_out;   
+      |     ^~~~~~~
+                   /openlane/designs/test/src/test.v:142:17: ... Location of blocking assignment
+  142 |         sda_out = 1'b1;
+      |                 ^
+                   /openlane/designs/test/src/test.v:131:26: ... Location of nonblocking assignment
+  131 |             ADDR:sda_out <= addrw[count];
+      |                          ^~
+%Error: Exiting due to 11 error(s)

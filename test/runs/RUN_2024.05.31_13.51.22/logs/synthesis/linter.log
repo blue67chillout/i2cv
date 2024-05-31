@@ -1,0 +1,12 @@
+%Warning-CASEINCOMPLETE: /openlane/designs/test/src/test.v:145:9: Case values incompletely covered (example pattern 0x0)
+  145 |         case (state)
+      |         ^~~~
+                         ... For warning description see https://verilator.org/warn/CASEINCOMPLETE?v=5.018
+                         ... Use "/* verilator lint_off CASEINCOMPLETE */" and lint_on around source to disable this message.
+%Warning-MULTIDRIVEN: /openlane/designs/test/src/test.v:31:5: Signal has multiple driving blocks with different clocking: 'test.sda_out'
+                      /openlane/designs/test/src/test.v:126:9: ... Location of first driving block
+  126 |         sda_out <= 1'b1;
+      |         ^~~~~~~
+                      /openlane/designs/test/src/test.v:142:9: ... Location of other driving block
+  142 |         sda_out <= 1'b1;
+      |         ^~~~~~~

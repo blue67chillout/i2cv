@@ -1,0 +1,131 @@
+%Warning-WIDTHEXPAND: /openlane/designs/test/src/test.v:52:15: Operator ASSIGNDLY expects 5 bits on the Assign RHS, but Assign RHS's VARREF 'IDLE' generates 4 bits.
+                                                             : ... note: In instance 'test'
+   52 |         state <= IDLE;
+      |               ^~
+                      ... For warning description see https://verilator.org/warn/WIDTHEXPAND?v=5.018
+                      ... Use "/* verilator lint_off WIDTHEXPAND */" and lint_on around source to disable this message.
+%Warning-WIDTHEXPAND: /openlane/designs/test/src/test.v:57:23: Operator ASSIGNDLY expects 5 bits on the Assign RHS, but Assign RHS's VARREF 'START' generates 4 bits.
+                                                             : ... note: In instance 'test'
+   57 |                 state <= START;
+      |                       ^~
+%Warning-WIDTHEXPAND: /openlane/designs/test/src/test.v:62:23: Operator ASSIGNDLY expects 5 bits on the Assign RHS, but Assign RHS's VARREF 'ADDR' generates 4 bits.
+                                                             : ... note: In instance 'test'
+   62 |                 state <= ADDR;
+      |                       ^~
+%Warning-WIDTHEXPAND: /openlane/designs/test/src/test.v:68:56: Operator ASSIGNDLY expects 5 bits on the Assign RHS, but Assign RHS's VARREF 'ACK0' generates 4 bits.
+                                                             : ... note: In instance 'test'
+   68 |                 if (count == 0 && addrw[0] == 0) state <= ACK0;
+      |                                                        ^~
+%Warning-WIDTHEXPAND: /openlane/designs/test/src/test.v:74:27: Operator ASSIGNDLY expects 5 bits on the Assign RHS, but Assign RHS's VARREF 'W_DATA' generates 4 bits.
+                                                             : ... note: In instance 'test'
+   74 |                     state <= W_DATA;
+      |                           ^~
+%Warning-WIDTHEXPAND: /openlane/designs/test/src/test.v:78:27: Operator ASSIGNDLY expects 5 bits on the Assign RHS, but Assign RHS's VARREF 'R_DATA' generates 4 bits.
+                                                             : ... note: In instance 'test'
+   78 |                     state <= R_DATA;
+      |                           ^~
+%Warning-WIDTHEXPAND: /openlane/designs/test/src/test.v:81:28: Operator ASSIGNDLY expects 5 bits on the Assign RHS, but Assign RHS's VARREF 'STOP' generates 4 bits.
+                                                             : ... note: In instance 'test'
+   81 |                 else state <= STOP;
+      |                            ^~
+%Warning-WIDTHEXPAND: /openlane/designs/test/src/test.v:86:27: Operator ASSIGNDLY expects 5 bits on the Assign RHS, but Assign RHS's VARREF 'ACK1' generates 4 bits.
+                                                             : ... note: In instance 'test'
+   86 |                     state <= ACK1;
+      |                           ^~
+%Warning-WIDTHEXPAND: /openlane/designs/test/src/test.v:93:27: Operator ASSIGNDLY expects 5 bits on the Assign RHS, but Assign RHS's VARREF 'ACK2' generates 4 bits.
+                                                             : ... note: In instance 'test'
+   93 |                     state <= ACK2;
+      |                           ^~
+%Warning-WIDTHEXPAND: /openlane/designs/test/src/test.v:100:27: Operator ASSIGNDLY expects 5 bits on the Assign RHS, but Assign RHS's VARREF 'W_DATA' generates 4 bits.
+                                                              : ... note: In instance 'test'
+  100 |                     state <= W_DATA;
+      |                           ^~
+%Warning-WIDTHEXPAND: /openlane/designs/test/src/test.v:103:28: Operator ASSIGNDLY expects 5 bits on the Assign RHS, but Assign RHS's VARREF 'STOP' generates 4 bits.
+                                                              : ... note: In instance 'test'
+  103 |                 else state <= STOP;
+      |                            ^~
+%Warning-WIDTHEXPAND: /openlane/designs/test/src/test.v:108:27: Operator ASSIGNDLY expects 5 bits on the Assign RHS, but Assign RHS's VARREF 'R_DATA' generates 4 bits.
+                                                              : ... note: In instance 'test'
+  108 |                     state <= R_DATA;
+      |                           ^~
+%Warning-WIDTHEXPAND: /openlane/designs/test/src/test.v:111:28: Operator ASSIGNDLY expects 5 bits on the Assign RHS, but Assign RHS's VARREF 'STOP' generates 4 bits.
+                                                              : ... note: In instance 'test'
+  111 |                 else state <= STOP;
+      |                            ^~
+%Warning-WIDTHEXPAND: /openlane/designs/test/src/test.v:115:23: Operator ASSIGNDLY expects 5 bits on the Assign RHS, but Assign RHS's VARREF 'IDLE' generates 4 bits.
+                                                              : ... note: In instance 'test'
+  115 |                 state <= IDLE;
+      |                       ^~
+%Warning-WIDTHEXPAND: /openlane/designs/test/src/test.v:117:27: Operator ASSIGNDLY expects 5 bits on the Assign RHS, but Assign RHS's VARREF 'IDLE' generates 4 bits.
+                                                              : ... note: In instance 'test'
+  117 |             default:state <= IDLE;
+      |                           ^~
+%Warning-WIDTHEXPAND: /openlane/designs/test/src/test.v:55:9: Operator CASE expects 5 bits on the Case Item, but Case Item's VARREF 'IDLE' generates 4 bits.
+                                                            : ... note: In instance 'test'
+   55 |         case(state)
+      |         ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/test/src/test.v:55:9: Operator CASE expects 5 bits on the Case Item, but Case Item's VARREF 'START' generates 4 bits.
+                                                            : ... note: In instance 'test'
+   55 |         case(state)
+      |         ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/test/src/test.v:55:9: Operator CASE expects 5 bits on the Case Item, but Case Item's VARREF 'ADDR' generates 4 bits.
+                                                            : ... note: In instance 'test'
+   55 |         case(state)
+      |         ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/test/src/test.v:55:9: Operator CASE expects 5 bits on the Case Item, but Case Item's VARREF 'ACK0' generates 4 bits.
+                                                            : ... note: In instance 'test'
+   55 |         case(state)
+      |         ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/test/src/test.v:55:9: Operator CASE expects 5 bits on the Case Item, but Case Item's VARREF 'W_DATA' generates 4 bits.
+                                                            : ... note: In instance 'test'
+   55 |         case(state)
+      |         ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/test/src/test.v:55:9: Operator CASE expects 5 bits on the Case Item, but Case Item's VARREF 'R_DATA' generates 4 bits.
+                                                            : ... note: In instance 'test'
+   55 |         case(state)
+      |         ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/test/src/test.v:55:9: Operator CASE expects 5 bits on the Case Item, but Case Item's VARREF 'ACK1' generates 4 bits.
+                                                            : ... note: In instance 'test'
+   55 |         case(state)
+      |         ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/test/src/test.v:55:9: Operator CASE expects 5 bits on the Case Item, but Case Item's VARREF 'ACK2' generates 4 bits.
+                                                            : ... note: In instance 'test'
+   55 |         case(state)
+      |         ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/test/src/test.v:55:9: Operator CASE expects 5 bits on the Case Item, but Case Item's VARREF 'STOP' generates 4 bits.
+                                                            : ... note: In instance 'test'
+   55 |         case(state)
+      |         ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/test/src/test.v:129:9: Operator CASE expects 5 bits on the Case Item, but Case Item's VARREF 'IDLE' generates 4 bits.
+                                                             : ... note: In instance 'test'
+  129 |         case (state)
+      |         ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/test/src/test.v:129:9: Operator CASE expects 5 bits on the Case Item, but Case Item's VARREF 'ADDR' generates 4 bits.
+                                                             : ... note: In instance 'test'
+  129 |         case (state)
+      |         ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/test/src/test.v:129:9: Operator CASE expects 5 bits on the Case Item, but Case Item's VARREF 'W_DATA' generates 4 bits.
+                                                             : ... note: In instance 'test'
+  129 |         case (state)
+      |         ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/test/src/test.v:129:9: Operator CASE expects 5 bits on the Case Item, but Case Item's VARREF 'R_DATA' generates 4 bits.
+                                                             : ... note: In instance 'test'
+  129 |         case (state)
+      |         ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/test/src/test.v:129:9: Operator CASE expects 5 bits on the Case Item, but Case Item's VARREF 'ACK2' generates 4 bits.
+                                                             : ... note: In instance 'test'
+  129 |         case (state)
+      |         ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/test/src/test.v:145:9: Operator CASE expects 5 bits on the Case Item, but Case Item's VARREF 'START' generates 4 bits.
+                                                             : ... note: In instance 'test'
+  145 |         case (state)
+      |         ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/test/src/test.v:145:9: Operator CASE expects 5 bits on the Case Item, but Case Item's VARREF 'STOP' generates 4 bits.
+                                                             : ... note: In instance 'test'
+  145 |         case (state)
+      |         ^~~~
+%Error-PROCASSWIRE: /openlane/designs/test/src/test.v:133:20: Procedural assignment to wire, perhaps intended var (IEEE 1800-2017 6.5): 'dout'
+                                                            : ... note: In instance 'test'
+  133 |             R_DATA:dout[count] <= sda_out;
+      |                    ^~~~
+%Error: Exiting due to 1 error(s)
